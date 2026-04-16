@@ -1,8 +1,8 @@
-import Meditation from "../../models/meditationModel.js";
+import MeditationModal from "../../models/meditationModel.js";
 
 const createQuietTime = async (req, res) => {
   try {
-    const entry = new Meditation({
+    const entry = new MeditationModal({
       day: req.body.day,
       passaye: req.body.passage,
       entryType: "quiettime",
@@ -19,7 +19,7 @@ const createQuietTime = async (req, res) => {
 
 const getQuietTimeEntries = async (req, res) => {
   try {
-    const entries = await Meditation.find({ entryType: "quiettime" });
+    const entries = await MeditationModal.find({ entryType: "quiettime" });
     res.status(200).json(entries);
   } catch (error) {
     res

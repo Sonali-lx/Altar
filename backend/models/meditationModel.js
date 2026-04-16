@@ -26,5 +26,5 @@ const meditationSchema = new mongoose.Schema({
   freeForm: String,
 });
 
-const Meditation = mongoose.model("Meditation", meditationSchema);
-export default Meditation;
+const MeditationModal = mongoose.model("Meditation", meditationSchema);
+export default MeditationModal;
